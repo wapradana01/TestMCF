@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Apps", "Api.Apps\Api.Apps.csproj", "{AAB7731E-A77A-42ED-9473-D8337FD6F888}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B383FAA4-D841-4086-B106-1108F243D79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{752FA2D1-BA78-44A8-B53F-EE06637F8BC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAB7731E-A77A-42ED-9473-D8337FD6F888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB7731E-A77A-42ED-9473-D8337FD6F888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB7731E-A77A-42ED-9473-D8337FD6F888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB7731E-A77A-42ED-9473-D8337FD6F888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B383FAA4-D841-4086-B106-1108F243D79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B383FAA4-D841-4086-B106-1108F243D79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B383FAA4-D841-4086-B106-1108F243D79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B383FAA4-D841-4086-B106-1108F243D79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752FA2D1-BA78-44A8-B53F-EE06637F8BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752FA2D1-BA78-44A8-B53F-EE06637F8BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752FA2D1-BA78-44A8-B53F-EE06637F8BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752FA2D1-BA78-44A8-B53F-EE06637F8BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B312BB3C-21DF-4E87-ADC6-636998AF13B0}
+	EndGlobalSection
+EndGlobal
