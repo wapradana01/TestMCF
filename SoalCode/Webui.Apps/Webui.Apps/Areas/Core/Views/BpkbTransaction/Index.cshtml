@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Webui.Apps.Models.BpkbTransaction>
+@{
+    ViewData["Title"] = "BpkbTransaction";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    var createUrl = Url.Action("Create", "BpkbTransaction", new { area = "Core" });
+}
+
+<h1>Bpkb Transaction</h1>
+
+<p>
+    <a href="@createUrl" class="btn">Add Data</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Agreement Number</th>
+            <th>BPKB No</th>
+            <th>Branch ID</th>
+            <th>BPKB Date</th>
+            <th>Faktur No</th>
+            <th>Faktur Date</th>
+            <th>Location ID</th>
+            <th>Police No</th>
+            <th>BPKB Date In</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AgreementNumber</td>
+                <td>@item.BpkbNo</td>
+                <td>@item.BranchId</td>
+                <td>@item.BpkbDate.Value.ToString("yyyy-MM-dd")</td>
+                <td>@item.FakturNo</td>
+                <td>@item.FakturDate.Value.ToString("yyyy-MM-dd")</td>
+                <td>@item.LocationId</td>
+                <td>@item.PoliceNo</td>
+                <td>@item.BpkbDateIn.Value.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

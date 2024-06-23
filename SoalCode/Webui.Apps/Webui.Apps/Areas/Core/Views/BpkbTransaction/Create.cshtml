@@ -1,0 +1,73 @@
+﻿@model Webui.Apps.Models.BpkbTransaction
+@{
+    ViewData["Title"] = "Add Data";
+    var locations = ViewBag.Locations as List<Webui.Apps.Models.Location>;
+}
+
+<h1>Add Data</h1>
+
+<h4>Data Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="AgreementNumber" class="control-label">AgreementNumber</label>
+                <input asp-for="AgreementNumber" class="form-control" />
+                <span asp-validation-for="AgreementNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BpkbNo" class="control-label">BpkbNo</label>
+                <input asp-for="BpkbNo" class="form-control" />
+                <span asp-validation-for="BpkbNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BranchId" class="control-label">BranchId</label>
+                <input asp-for="BranchId" class="form-control" />
+                <span asp-validation-for="BranchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BpkbDate" class="control-label">BpkbDate</label>
+                <input asp-for="BpkbDate" class="form-control" />
+                <span asp-validation-for="BpkbDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FakturNo" class="control-label">FakturNo</label>
+                <input asp-for="FakturNo" class="form-control" />
+                <span asp-validation-for="FakturNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FakturDate" class="control-label">FakturDate</label>
+                <input asp-for="FakturDate" class="form-control" />
+                <span asp-validation-for="FakturDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationId" class="control-label">LocationId</label>
+                <select asp-for="LocationId" class="form-control">
+                    @foreach (var location in locations)
+                    {
+                        <option value="@location.LocationId">@location.LocationName</option>
+                    }
+                </select>
+                <span asp-validation-for="LocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PoliceNo" class="control-label">PoliceNo</label>
+                <input asp-for="PoliceNo" class="form-control" />
+                <span asp-validation-for="PoliceNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BpkbDateIn" class="control-label">BpkbDateIn</label>
+                <input asp-for="BpkbDateIn" class="form-control" />
+                <span asp-validation-for="BpkbDateIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

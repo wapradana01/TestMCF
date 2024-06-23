@@ -20,7 +20,10 @@ namespace Api.Apps.Controllers
             var result = await _userService.Login(input);
 
             if (string.IsNullOrEmpty(result.AccessToken))
-                return Unauthorized();
+                return Unauthorized(new
+                {
+                    Message = "Username atau password yang anda masukkan salah"
+                });
 
             return Ok(result);
         }
